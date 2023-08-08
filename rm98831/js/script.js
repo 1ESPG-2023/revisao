@@ -53,13 +53,76 @@ for (let i= 0;i<nomesAlunos.length ;++i){
         //Quebrar linha
         console.log("\n");
 
-    //inserir novos nomes no array, utilizando metodos: push e unshift
-    /*push()-> insere um ou mais itens no ao */ 
+    
+    //Inserir novos nomes no array, utilizando os metodos: push e unshift
+    /*push() -> Insere um ou mais itens no ao final array */
+    /*unshift() -> Insere um ou mais itens no início do array */
+    nomesAlunos.push("André");
+    nomesAlunos.unshift("Hugo");
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
 
-    nomesAlunos.push("André")
-    nomesAlunos.unshift("Hugo")
+    //Quebrar linha
+    console.log("\n");
+    //Removendo o primeiro elemento com shift
+    nomesAlunos.shift();
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
 
+    //Quebrar linha
+    console.log("\n");
+    //Removendo o último elemento com pop
+    nomesAlunos.pop();
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+
+    //Quebrar linha
+    console.log("\n");
+    //Colocando os dados em ordem alfabetica com o método sort.
+    nomesAlunos.sort();
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+    
+    //Quebrar linha
+    console.log("\n");
+    //revertendo a poição dos dados com o método reverse.
+    nomesAlunos.reverse();
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+    
+    //Quebrar linha
+    console.log("\n");
+    //buscando elementos com indexOf
+    let index = nomesAlunos.indexOf("Claudia");
+    //imprimindo o array depois das alterações realizadas nos metodo acima:
     console.log('array após as modificações:',nomesAlunos);
-    
-    
-    
+    console.log('posição onde o elemento foi encontrado:', index );
+
+    //Quebrar linha
+    console.log("\n");
+    //Alterando um elemento no array com o método splice
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    nomesAlunos.splice(3,1,"Jojo");
+    console.log('Array após as modificações:',nomesAlunos );
+
+    //Quebrar linha
+    console.log("\n");
+    //Alterando um elemento no array com o método splice e solicitando mais uma alteração.
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    nomesAlunos.splice(3,2,"Tuca");
+    console.log('Array após as modificações:',nomesAlunos );
+
+    //Quebrar linha
+    console.log("\n");
+    //Remover um elemento no array com o método splice
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    nomesAlunos.splice(1,1);
+    console.log('Array após as modificações:',nomesAlunos );
+
+ //Quebrar linha
+ console.log("\n");
+ //Remover um elemento no array com o método splice utilizando o método indexOf como parâmetro.
+ //Imprimindo o array depois das alterações realizadas nos métodos acima:
+ let indexNome = nomesAlunos.indexOf("Tuca");
+ nomesAlunos.splice(indexNome,1);
+ console.log('Array após as modificações:',nomesAlunos );   
