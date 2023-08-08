@@ -46,3 +46,32 @@ console.log("Array após o shift:", nomesAlunos);
 //Removendo o último elemento com o pop:
 nomesAlunos.pop();
 console.log("Array após o pop:", nomesAlunos);
+
+//Organizando os elementos de um Array em ordem alfabética ou crescente, através do método sort:
+nomesAlunos.sort();
+console.log("Array após o sort:", nomesAlunos);
+
+//Revertendo a ordem dos elementos de um Array com o método reverse:
+nomesAlunos.reverse();
+console.log("Array após o reverse:", nomesAlunos);
+
+console.log("\n");
+
+//Buscando elementos no Array com o método indexOf:
+let index1 = nomesAlunos.indexOf("Claúdia");
+console.log("Posição do elemento procurado (Claúdia): ", index1);
+let index2 = nomesAlunos.indexOf("Júlio");
+console.log("Posição do elemento procurado que não foi encontrado (Júlio): ", index2);
+
+//Alterando um elemento no Array com o método splice:
+nomesAlunos.splice(3, 1, "Júlio");
+console.log("Array após o splice: ", nomesAlunos)
+nomesAlunos.splice(3, 2, "Tuca");
+console.log("Array após o splice com duas alterações: ", nomesAlunos)
+nomesAlunos.splice(1, 1);
+console.log("Array após o splice sem definir uma substituíção: ", nomesAlunos)
+
+//Removendo um elemento do Array com o método splicem, mas utilizando o indexOf como parâmetro:
+let indexRemove = nomesAlunos.indexOf("Tuca");
+nomesAlunos.splice(indexRemove, 1);
+console.log("Array após o splice com o parâmetro indexOf: ", nomesAlunos)
