@@ -61,6 +61,42 @@ console.log(nomes)
 console.log("\n");
 //Métodos para remover elementos do array: removendo o primeiro elemento com shift
 nomes.shift();
-console.log("Array com remoção: ", nomes)
+console.log("Array com remoção no inicio: ", nomes)
+
+//Removendo o último element o método pop
+nomes.pop();
+console.log("Array com remoção no final: ", nomes)
+//Quebrar linha
+console.log("\n");
+
+//Método para colocar o array em ordem alfabética : sort
+nomes.sort();
+console.log("Array em ordem: ", nomes)
+
+//Método reverse paa reverter a posição
+nomes.reverse();
+console.log("Array com reverse: ",nomes)
+
+//Utilizando o indexof para buscar um determinado valor dentro do array. Caso ele localize, ele retorna o índice do elemeneto, se não, retorna -1
+//Buscamento elementos
+
+let index=nomes.indexOf("Lana");
+console.log("Posição onde o nome foi encontrado: ", index);
+
+//Mético splice é utilizado para alterar os elementos dentro do array e também para remove-los
+//1. Alterando um elemento através deste método. Primeiro informamos a posição que queremos que seja alterada, número de alterações e por ultimo, colocar pelo oque vai ser trocado
+nomes.splice(3,1, "Patricia")
+console.log("O Array foi modificado: ", nomes);
+
+//2.Removendo um elemento com splice
+nomes.splice(1,1);
+console.log("O Array foi modificado: ", nomes);
+//Utilizando o método indexof como parâmetro
+let indexnome =nomes.indexOf("Lana")
+nomes.splice(indexnome);
+console.log(nomes);
+
+
+
 
 
