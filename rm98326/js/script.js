@@ -58,7 +58,6 @@ console.log("\n")
 /*unshift() -> Insere um ou mais itens no início do array*/
 nomesAlunos.push("André")
 nomesAlunos.unshift("Hugo")
-
 //Imprimindo o array
 console.log("Array após as modificações: ", nomesAlunos)
 
@@ -67,6 +66,75 @@ console.log("\n")
 
 //Removendo o primeiro elemento com shift
 nomesAlunos.shift()
+//Imprimindo o array
+console.log("Array após as modificações: ", nomesAlunos)
 
+//Quebrar linha:
+console.log("\n")
+
+//Removendo o último elemento com pop
+nomesAlunos.pop()
+//Imprimindo o array
+console.log("Array após as modificações: ", nomesAlunos)
+
+//Quebrar linha:
+console.log("\n")
+
+
+//Colocando os dados em ordem alfabética com o método sort.
+nomesAlunos.sort()
+//Imprimindo o array
+console.log("Array após as modificações: ", nomesAlunos)
+
+//Quebrar linha:
+console.log("\n")
+
+//Revertendo a posição dos dados com o método reverse.
+nomesAlunos.reverse()
+//Imprimindo o array
+console.log("Array após as modificações: ", nomesAlunos)
+
+//Quebrar linha:
+console.log("\n")
+
+
+//Buscando elementos com indexOf
+let index = nomesAlunos.indexOf("Claudia")
+//Imprimindo o array
+console.log("Array após as modificações: ", nomesAlunos)
+console.log("Posição onde o elemento foi encontrado: ", index)
+
+//Quebrar linha:
+console.log("\n")
+
+
+
+//Alterando um elemento no array com o método splice
+nomesAlunos.splice(3,1,"Jojo")
+//Imprimindo o array
+console.log("Array após as modificações: ", nomesAlunos)
+
+//Quebrar linha:
+console.log("\n")
+
+//Alterando um elemento no array com o método splice e solicitando mais uma alteração
+nomesAlunos.splice(3,2,"Tuca")
+//Imprimindo o array
+console.log("Array após as modificações: ", nomesAlunos)
+
+//Quebrar linha:
+console.log("\n")
+
+//Removendo um elemento no array com o método splice
+nomesAlunos.splice(1,1)
+//Imprimindo o array
+console.log("Array após as modificações: ", nomesAlunos)
+
+//Quebrar linha:
+console.log("\n")
+
+//Removendo um elemento no array com o método splice utilizando o método indexOf como parâmetro
+let indexNome = nomesAlunos.indexOf("Tuca")
+nomesAlunos.splice(indexNome,1)
 //Imprimindo o array
 console.log("Array após as modificações: ", nomesAlunos)
