@@ -68,3 +68,61 @@ console.log("\n")
 //Removendo o primeiro alemento com shift
 nomesAlunos.shift();
 console.log("Array após as modificações", nomesAlunos);
+//Removendo o ultimo alemento com pop:
+nomesAlunos.pop()
+console.log("Array após as modificações", nomesAlunos);
+
+//Quebrar linha
+console.log("\n")
+//Colocando os nomes em ordem alfabetica com o método sort
+nomesAlunos.sort();
+console.log("Array após as modificações", nomesAlunos);
+//Revertendo a posição com o método reverse
+nomesAlunos.reverse()
+console.log("Array após as modificações", nomesAlunos);
+
+//Quebrar linha
+console.log("\n")
+//Buscando elementos com indexOf
+let index = nomesAlunos.indexOf("Claudia");
+console.log("Array após as modificações", nomesAlunos);
+console.log("Posição onde o elementon foi encontrado:", index);
+// retorna -1 caso não encontre
+
+//Quebrar linha
+console.log("\n")
+//Alterando um elemento no array com o método splice
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+nomesAlunos.splice(3,1, "Jojo")
+// o indice, quantas vezes, o que fazer
+console.log("Array após as modificações", nomesAlunos);
+
+//Quebrar linha
+console.log("\n")
+//Alterando um elemento no array com o método splice e solicitando mais uma alteração.
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+nomesAlunos.splice(3,2, "Tuca")
+// o indice, quantas vezes, o que fazer
+console.log("Array após as modificações", nomesAlunos);
+//se colocar outra vez e não tiver nada, ele remove
+
+//Quebrar linha
+console.log("\n")
+//Removendo um elemento no array com o método splice .
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+nomesAlunos.splice(1,1)
+// o indice, quantas vezes, o que fazer
+console.log("Array após as modificações", nomesAlunos);
+
+//Quebrar linha
+console.log("\n")
+//Removendo um elemento no array com o método splice utilizando o método indexOf como parametro.
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+let indexNome = nomesAlunos.indexOf("Tuca");
+nomesAlunos.splice(indexNome,1)
+// o indice, quantas vezes, o que fazer
+console.log("Array após as modificações", nomesAlunos);
+
+
+
+
