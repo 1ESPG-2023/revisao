@@ -48,3 +48,35 @@ nomesAlunos.shift()
 console.log("Array apos modificações",nomesAlunos)
 console.log("\n")
 //Removendo primeiro element com shift
+//Quebrar linha
+console.log("\n");
+//Removendo o último elemento com pop
+nomesAlunos.pop();
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+
+//Quebrar linha
+console.log("\n");
+//Colocando os dados em ordem alfabetica com o método sort.
+nomesAlunos.sort();
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+
+//Quebrar linha
+console.log("\n");
+//revertendo a poição dos dados com o método reverse.
+nomesAlunos.reverse();
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+
+let index = nomesAlunos.indexOf("Claudia");
+//imprimindo o array depois das alterações realizadas nos metodos acima
+
+//alterando com o metodo splice
+nomesAlunos.splice(3,1,"Jojo")
+console.log("Array apos modificações,nomesAlunos",nomesAlunos);
+console.log("Posição onde foi encontrado",index)
+
+nomesAlunos.splice(3,2,"Tuca");
+console.log("Array apos modificacoes",nomesAlunos)
+
