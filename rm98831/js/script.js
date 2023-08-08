@@ -29,8 +29,37 @@ for (let i= 0;i<nomesAlunos.length ;++i){
         console.log(`Nome do aluno : ${index + 1} - ${nome}`);     
     });
 
+    //Quebrar linha
+    console.log("\n");
+
+    //Gerar um novo loop para iterar o array e ao mesm tempo 
+    //1 - Criar novos elementos na div
+    //2 - Adicionar cada um dos elementos do array a cada um dos elementos da div
+
+    const divLista = document.getElementById("lista-nomes")
+
+    //utilizando o for of para iterar o array 
+    for (const nome of nomesAlunos) {
+        //elemento p sendo criando
+        let p = document.createElement("p")
+        //
+        p.textContent = nome;
+
+        divLista.appendChild(p);
+        
+        console.log(nome);
+    }
+
+        //Quebrar linha
+        console.log("\n");
+
+    //inserir novos nomes no array, utilizando metodos: push e unshift
+    /*push()-> insere um ou mais itens no ao */ 
+
+    nomesAlunos.push("André")
+    nomesAlunos.unshift("Hugo")
+
+    console.log('array após as modificações:',nomesAlunos);
     
-
     
-
-
+    
