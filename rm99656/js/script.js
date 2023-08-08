@@ -16,6 +16,26 @@ for (var i = 0; i< nomesAlunos.length; i++){
 }
 
 
-nomesAlunos.forEach(nome =>{
-    console.log(`Nome do cria: ${nome}`)
-})
+console.log("\n")
+
+// nomesAlunos.forEach(nome =>{
+//     console.log(`Nome do cria: ${nome}`)
+// })
+
+nomesAlunos.forEach( (nome,index) =>{
+    console.log(`Nome do cria : ${index + 1} - ${nome}`);     
+});
+
+const divnomes = document.getElementById("lista-nomes")
+
+for (const nome of nomesAlunos) {
+    let p = document.createElement("p");
+
+    p.textContent = nome
+
+    divnomes.appendChild(p)
+    
+    console.log(nome)
+}
+
+
