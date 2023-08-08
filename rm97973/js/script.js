@@ -57,4 +57,34 @@ console.log('Array após modificações:',nomesAlunos)
 // Removendo o primiero elemento com o shift
 nomesAlunos.shift();
 // mostrando a situação atual 
-console.log('Array após modificações:',nomesAlunos)
+console.log('Array após modificações:',nomesAlunos);
+
+nomesAlunos.pop()
+console.log('Array após modificações:',nomesAlunos);
+
+nomesAlunos.sort()
+console.log('Array após modificações:',nomesAlunos);
+
+nomesAlunos.reverse()
+console.log('Array após modificações:',nomesAlunos);
+
+// Buscando elementos com indexOf
+let index = nomesAlunos.indexOf('claudia');
+console.log('Array após modificações:',nomesAlunos);
+console.log('Posição onde o elemtno foi encontrado:', index);
+
+// alterando um alemento no array com o método splice
+nomesAlunos.splice(3,1,"Jojo");
+console.log('Array após modificações:',nomesAlunos);
+
+// alterando o elemento no array com o mpetodo splice e solicitando mais uma alteração
+nomesAlunos.splice(3,2,"tuca");
+console.log('Array após modificações:',nomesAlunos); //a claudia sumiu :(
+
+// Removendo um elemento do array com o metodo splice utilizando metodo indexof como parametro 
+let indexNome = nomesAlunos.indexOf("Tuca");
+nomesAlunos.splice(indexNome,1);
+console.log('Array após modificações:',nomesAlunos);
+
+
+
