@@ -18,3 +18,24 @@ nomesAlunos.forEach((nome,index)=>{
     console.log(`nome do aluno ${index + 1} ${nome}`)
 })
 
+
+
+// Gerar um novo loop para interar o array e ao msm tempo 
+// 1- criar novos elementos na div 
+// 2 - adicionar cada um dos elementos do array a cada um dos elementos da div 
+
+// recuperando elemento do html
+const div_lista = document.getElementById("lista-nomes")
+
+
+// utilizando o forOF para interar o array 
+for (const nomes of nomesAlunos) {
+    let p = document.createElement('p');
+    p.textContent = nomes
+    div_lista.appendChild(p)
+    console.log(nomes)
+}
+
+nomesAlunos.push("las hana")
+nomesAlunos.unshift("al fahsee")
+console.log(nomesAlunos)
