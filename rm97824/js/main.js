@@ -64,3 +64,26 @@ nomeAlunos.reverse();
 console.log("\n");
 console.log("Array após as alterações:",nomeAlunos);
 
+//Buscando elementos com indexOf
+let index = nomeAlunos.indexOf("Guilherme")
+console.log("\n")
+console.log("Array após as alterações:",nomeAlunos)
+console.log("Posição que o elemento buscado foi encontrado:", index)
+
+//Alterando um elemento no array com o método splice()
+//splice(indice, vezes, conteudo)
+nomeAlunos.splice(3, 1, "Jojo")
+console.log("\n")
+console.log("Array após as alterações:",nomeAlunos)
+
+//Alterando um elemento no array com o método splice()
+//splice(indice, vezes, conteudo)
+nomeAlunos.splice(1, 1, "tuca")
+console.log("\n")
+console.log("Array após as alterações:",nomeAlunos)
+
+//Removendo um elemento no array com o método splice utilizando o método indexOf como parâmentro
+
+let indexNome = nomeAlunos.indexOf("Tuca")
+nomeAlunos.splice(indexNome, 1)
+console.log("Array após as alterações:",nomeAlunos)
