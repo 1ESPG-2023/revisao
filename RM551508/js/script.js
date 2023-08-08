@@ -38,4 +38,15 @@ for (const nomes of nomesAlunos) {
 
 nomesAlunos.push("las hana")
 nomesAlunos.unshift("al fahsee")
+nomesAlunos.sort()
+console.log(`nomes: ${nomesAlunos}`)
+
+
+// O método indexOf retorna qual posição tal item ta no array
+let index = nomesAlunos.indexOf("I-pim")
+console.log(`Posição onde o elemento foi encontrado ${index}`)
+
+// alterando um elemento no array com o método splice 
+nomesAlunos.splice(3, 1, "I pim")
 console.log(nomesAlunos)
+
