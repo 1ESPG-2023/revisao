@@ -27,6 +27,43 @@ for (var i= 0; i<nomesAlunos.length; ++i){
     nomesAlunos.forEach((nome, index)=>{
         console.log(`Nome do aluno : ${index + 1} ${nome}`)
     });
+    
+    //Quebrar linha
+    console.log("\n");
+
+    // Gerar um novo loop para iterar o array e ao mesmo tempo 
+    // 1 - Criar novos elementos
+    // 2 - Adicionar cada um dos elementos do array a cada um dos elementos da div
+
+    const divLista = document.getElementById("lista-nomes");
+
+    //utilizando for off para iterar o array
+    for (const nome of nomesAlunos) {
+        //elemento p sendo criado
+        let p = document.createElement("p");
+        //texto nome sendo inserido no elemento p 
+        p.textContent = nome;
+        divLista.appendChild(p);
+
+        console.log(nome)
+    }
+
+    //Inserir novos nomes no array, utilizando metodos os metodos: push e unshift
+    /*push() -> Insere um ou mais itens no ao final array */
+    /*unshift() -> Insere um ou mais itens no início do array */
+    nomesAlunos.push("Ádre")
+    nomesAlunos.unshift("Hugo")
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+
+    //Quebrar linha
+    console.log("\n");
+
+    //Removendo o primeiro elemento com shift
+    nomesAlunos.shift();
+    //Imprimindo o array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+    
 
 
 
