@@ -23,6 +23,10 @@ for(var i=0;i<nomes.length ;++i){
     nomes.forEach((nome,index)=>{
         console.log(`Nome da pessoa: ${index + 1} - ${nomes}`)
     });
-
 }
+//Gerar um novo loop para inteirar o array e ao mesmo tempo:
+//1 - Criar novos elementos na div
+//2-Adicionar cada um dos elementos do array a cada um dos elementos da div
+
+
 
