@@ -60,5 +60,52 @@ for (let i= 0;i<nomesAlunos.length ;++i){
     // Imprimindo o Array depois das alterações realizadas nos métodos acima:
     console.log('Array após as modificações:',nomesAlunos );
 
+    // Removendo o ultimo elemento com pop
+    nomesAlunos.pop();
+
+    // Imprimindo o Array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+
     // Removendo o primeiro elemento com shift
     nomesAlunos.shift();
+
+    // Imprimindo o Array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+
+    //Revertendo a posição dos dados com o método reverse
+    nomesAlunos.reverse();
+
+    // Imprimindo o Array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+
+    // Colocando os dados em ordem alfabética com o sort
+    nomesAlunos.sort();
+
+    // Imprimindo o Array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+
+    // Buscando Elementos com indexOf
+    let index = nomesAlunos.indexOf("Ao Mosso");
+
+    // Imprimindo o Array depois das alterações realizadas nos métodos acima:
+    console.log('Posição onde o elemento foi encontrado: ',index);
+
+    // Alterar um elemento no array pelo método splice
+    nomesAlunos.splice(3,1,"Al Fahsee");
+
+    // Imprimindo o Array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+    
+    // Alterar um elemento no array pelo método splice
+    nomesAlunos.splice(1,1,"Fran Goo");
+
+    // Imprimindo o Array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+
+    // Alterar um elemento no array pelo método indexOf como parâmetro
+    let indexNome = nomesAlunos.indexOf("Fran Goo")
+    nomesAlunos.splice(indexNome);
+
+    // Imprimindo o Array depois das alterações realizadas nos métodos acima:
+    console.log('Array após as modificações:',nomesAlunos );
+
