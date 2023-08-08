@@ -67,3 +67,63 @@ console.log("\n");
 nomesAlunos.shift();
 //imprimindo o array depois das alterações realizadas nos metodos acima:
 console.log('Array após as modificações:',nomesAlunos);
+
+//quebrar linha
+console.log("\n");
+//removendo o último elemento com shift
+nomesAlunos.pop();
+//imprimindo o array depois das alterações realizadas nos metodos acima:
+console.log('Array após as modificações:',nomesAlunos);
+
+//quebrar linha
+console.log("\n");
+//colocando os dados em ordem alfabetica com o metodo sort
+nomesAlunos.sort();
+//imprimindo o array depois das alterações realizadas nos metodos acima:
+console.log('Array após as modificações:',nomesAlunos);
+
+//quebrar linha
+console.log("\n");
+//revertendo a posição dos dados com o metodo reverse
+nomesAlunos.reverse();
+//imprimindo o array depois das alterações realizadas nos metodos acima:
+console.log('Array após as modificações:',nomesAlunos);
+
+//quebrar linha
+console.log("\n");
+//buscando elementos com indexof
+let index = nomesAlunos.indexOf("Claudia");
+//retorna -1 caso não encontrar
+//imprimindo o array depois das alterações realizadas nos metodos acima:
+console.log('Array após as modificações:',nomesAlunos);
+console.log('Posição onde o elemento foi encontrado:',index);
+
+//quebrar linha
+console.log("\n");
+// alterando um elemento do array com o metodo splice
+nomesAlunos.splice(3,1,"Jojo");
+console.log('Array após as modificações:',nomesAlunos);
+
+//quebrar linha
+console.log("\n");
+// alterando um elemento do array com o metodo splice e solicitando mais uma alteração
+//imprimindo o array depois das alterações realizadas nos metodos acima:
+nomesAlunos.splice(3,2,"Tuca");
+console.log('Array após as modificações:',nomesAlunos);
+
+//quebrar linha
+console.log("\n");
+// remover um elemento do array com o metodo splice
+//imprimindo o array depois das alterações realizadas nos metodos acima:
+nomesAlunos.splice(1,1);
+console.log('Array após as modificações:',nomesAlunos);
+
+//quebrar linha
+console.log("\n");
+// remover um elemento do array com o metodo splice utilizando o metodo indexOf como parametro
+//imprimindo o array depois das alterações realizadas nos metodos acima:
+let indexNome = nomesAlunos.indexOf("Tuca");
+nomesAlunos.splice(indexNome,1);
+console.log('Array após as modificações:',nomesAlunos);
+
+
