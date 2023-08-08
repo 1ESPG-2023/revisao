@@ -68,3 +68,69 @@ console.log("\n");
 nomesAlunos.pop();
 //Imprimindo o array depois das alterações realizadas nos métodos acima:
 console.log('Array após as modificações:',nomesAlunos );
+
+
+//Quebrar linha
+console.log("\n");
+//Colocando os dados em ordem crescente ou alfabética com o método sort
+nomesAlunos.sort();
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+
+
+//Quebrar linha
+console.log("\n");
+//Revertendo a posição dos dados com o método reverse
+nomesAlunos.reverse();
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+
+
+//Quebrar linha
+console.log("\n");
+//Buscando elementos com indexOf
+let index = nomesAlunos.indexOf("Cláudia")
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+console.log('Posição onde o elemento foi encontrado: ',index );
+
+
+//Quebrar linha
+console.log("\n");
+//Alterando um elemento no array com o método splice
+nomesAlunos.splice(3, 1, "Jojo")
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+
+
+//Quebrar linha
+console.log("\n");
+//Alterando um elemento no array com o método splice e solicitando mais uma alteração
+nomesAlunos.splice(3, 2, "Tuca")
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+
+
+//Quebrar linha
+console.log("\n");
+//Alterando um elemento no array com o método splice e solicitando mais uma alteração
+nomesAlunos.splice(3, 2, "Tuca")
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+
+
+//Quebrar linha
+console.log("\n");
+//Remover um elemento no array com o método splice
+nomesAlunos.splice(1,1);
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
+
+
+//Quebrar linha
+console.log("\n");
+//Remover um elemento no array com o método splice utilizando o método indexOf como parâmetro.
+let indexNome = nomesAlunos.indexOf("Tuca");
+nomesAlunos.splice(indexNome,1);
+//Imprimindo o array depois das alterações realizadas nos métodos acima:
+console.log('Array após as modificações:',nomesAlunos );
