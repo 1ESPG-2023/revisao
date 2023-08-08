@@ -34,8 +34,44 @@ for (const nome of nomesAlunos) {
     p.textContent = nome
 
     divnomes.appendChild(p)
-    
+
     console.log(nome)
 }
 
+nomesAlunos.push("Rodinei") //Insere no final
+nomesAlunos.unshift("Flavin") //Insere no início
 
+console.log(`Array: ${nomesAlunos}`)
+
+nomesAlunos.shift() //Remove o primeiro
+
+nomesAlunos.pop() //Remove o últmo
+
+nomesAlunos.sort()
+
+console.log('Array após as modificações:',nomesAlunos );
+
+console.log("\n");
+
+nomesAlunos.reverse();
+
+console.log('Array após as modificações:',nomesAlunos );
+
+
+let index = nomesAlunos.indexOf("Fernando")
+
+console.log(index)
+
+console.log("\n");
+
+nomesAlunos.splice(3,1,"Claudinho")
+
+console.log(nomesAlunos)
+
+nomesAlunos.splice(3,2,"Cria","Armandinho")
+
+console.log(nomesAlunos)
+
+nomesAlunos.splice(nomesAlunos.indexOf("Cria"), 1)
+
+console.log(nomesAlunos)
