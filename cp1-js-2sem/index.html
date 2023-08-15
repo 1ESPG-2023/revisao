@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>cp4 - RM97824</title>
+</head>
+<body>
+    <h1>ToDo list advanced</h1>
+    <div class="container">
+        <form action="#" id="formAddTarefas" method="get">
+            <fieldset>
+                <label for="descricao">Descrição</label>
+                <input type="text" name="descricao" id="inputDescricao" placeholder="Descreva a tarefa">
+            
+                <label for="autor">Autor</label>
+                <input type="text" name="autor" id="inputAutor" placeholder="Digite o nome do autor">
+
+                <label for="departamento">Departamento</label>
+                <input type="text" name="departamento" id="inputDepartamento" placeholder="Digite o departamento que pertence">
+
+                <label for="importancia">Importancia</label>
+                <input type="number" name="importancia" id="inputImportancia" placeholder="Digite a importancia de 0 a 10">
+
+                <input type="submit" id="btnAdiciona" value="Adicionar">
+            </fieldset>
+            
+        </form>
+    </div>
+    <table id="listaDeTarefas" class="listaDeTarefas">
+        <caption>Tabela de tarefas</caption>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Autor</th>
+                <th>Departamento</th>
+                <th>Importância</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Comprar Frutas</td>
+                <td>vini</td>
+                <td>Mercado</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
