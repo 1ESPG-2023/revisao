@@ -18,6 +18,26 @@ botaoAddTarefa.addEventListener("click", (evt)=>{
     //Inerando a tarefa no array de tarefa
     listaTarefasArray.push(inputTarefa.value);
 
+    const listaTarefasUL = document.querySelector("#listaTarefa");
+
+    //Criando o elemento li
+    let li = document.createElement("li");
+
+    //li.innerHTML = inputTarefa.value +" <button> x </button>";
+
+    li.textContent = inputTarefa.value;
+
+    //Criando o botão
+    let botaoExcluir = document.createElement("button");
+
+    botaoExcluir.textContent = " x ";
+
+    //Inserindo o botão no li
+    li.appendChild(botaoExcluir);
+
+    //Inserindo o botão na ul
+    listaTarefasUL.appendChild(li);
+
     //Imprimindo o array de tarefas e limpando o campo.
     console.log(listaTarefasArray);
     inputTarefa.value = "";
