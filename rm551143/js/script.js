@@ -125,5 +125,3 @@ console.log("\n");
 let indexNome = nomesAlunos.indexOf("Tuca");
 nomesAlunos.splice(indexNome,1);
 console.log('Array após as modificações:',nomesAlunos);
-
-
