@@ -27,6 +27,10 @@ input {
     margin: 10px;
 }
 
+li {
+    text-transform: capitalize;
+}
+
 legend {
     text-align: center;
     font-family: 'Borel', cursive;
