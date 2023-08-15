@@ -28,12 +28,41 @@ botaoAddTarefa.addEventListener("click", (evt)=>{
     botaoExcluir.textContent = " x ";
 
     li.appendChild(botaoExcluir);
-
+    
     listaTarefasUL.appendChild(li); 
+
+    //Adicionando a função para o botao excluir
+    botaoExcluir.addEventListener("click", (evt)=>{
+        evt.preventDefault();
+
+        //Pegando o texto da li e dividindo com split
+        let conteudoDaLi = evt.target.parentNode.textContent.split(" ");
+        // console.log(conteudoDaLi);
+        
+        //Descobrindo o indice da tarefa com indexof
+        let indiceTarefa = listaTarefasArray.indexOf( conteudoDaLi[0]);
+        // console.log(indiceTarefa);
+
+        //Removendo do array com o metodo splice passando o indice
+        listaTarefasArray.splice(indiceTarefa, 1);
+        
+
+        evt.target.parentNode.remove();
+
+        //Imprimir o array de tarefas e limpando o campo    
+        console.log(listaTarefasArray);
+    })
+
 
     //Imprimindo o array de tarefas e limpando o campo.
     console.log(listaTarefasArray);
     inputTarefa.value = ""; //Serve pra limpar o campo
 
-
 });
+
+//Entendendo o método SPLIT de String em JS.
+// let frase = "Meu prof, de, JS é lindo e, eu , amo ele.";
+// console.log(`Frase: ${frase}`);
+
+// let fraseSplitada = frase.split(",");
+// console.log(fraseSplitada);
