@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coded by rm99880</title>
+    <title>Coded by PF0670</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="../js/tarefa.js"></script>
+    <script src="../js/tarefa.js" defer></script>
 </head>
 <body>
+    
     <h1>MINHAS TAREFAS</h1>
 
     <div>
@@ -15,19 +16,20 @@
             <fieldset>
                 <legend>Cadastro de Tarefas</legend>
                 <div>
-                    <Label for="idTarefa">Nova Tarefa</Label>
-                    <input type="text" name="tarefa" id="idTarefa" placeholder="Digite a Tarefa:">
+                    <label for="idTarefa">Nova Tarefa</label>
+                    <input type="text" name="tarefa" id="idTarefa" placeholder="Digite a tarefa.">
+                </div>
+                <div>
+                    <button type="submit" id="btnAddTarefa">Adicionar</button>
                 </div>
             </fieldset>
         </form>
     </div>
 
     <div>
-        <button type="submit" id="btnAddTarefa">Adicionar</button>
-    </div>
-
-    <div>
         <ul id="listaTarefa"></ul>
     </div>
+
+
 </body>
 </html>
