@@ -29,7 +29,25 @@ botaoAddTarefa.addEventListener("click", (evt)=>{
 
     listaTarefasUl.appendChild(li);
 
+    botaoExcluir.addEventListener("click",(evt)=>{
+        evt.preventDefault
+        //pegando  o texto da LI dividindo com o split.
+        let conteudoDaLi = evt.target.parentNode.textContent.split(" ")
+        //descobrindo o indice da tarefa com indexOf
+        let indiceTarefa = listaTarefasArray.indexOf(conteudoDaLi[0])        
+        listaTarefasArray.splice(indiceTarefa,1)
+        console.log(conteudoDaLi)
+        console.log(evt.target.parentNode)
+        evt.target.parentNode.remove()
+    })
+
     console.log(listaTarefasArray);
     inputTarefa.value = "";
 
 });
+
+//entendendo o método split em js.
+// let frase = "Meu profes, de , JS é careca, e ,eu, amo ele,kratos da programação"
+// console.log(`Frase:${frase}`)
+// let fraseSplitada = frase.split(",")
+// console.log(fraseSplitada)
