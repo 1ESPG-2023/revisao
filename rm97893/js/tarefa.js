@@ -48,3 +48,8 @@ botaoAddTarefa.addEventListener("click",(evt)=>{
 });
 
 // Entendendo o método SPLIT em String em JS.
+let frase = "Meu prof, de, JS é lindo e, eu , amo ele.";
+console.log(`Frase: ${frase}`);
+
+let fraseSplitada = frase.split(",");
+console.log(fraseSplitada);
