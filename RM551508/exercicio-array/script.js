@@ -20,7 +20,10 @@ botaoAddTarefa.addEventListener("click", (evento)=>{
     li.appendChild(botaoExcluir)
     listaTarefaUl.appendChild(li)
 
-
+    botaoExcluir.addEventListener("click",(evt)=>{
+        evt.preventDefault()
+        evt.target.parentNode.remove()
+    })
 
     console.log(listaTarefasArray)
     InputTarefa.value =  ''
