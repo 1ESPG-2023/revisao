@@ -2,3 +2,7 @@
 label[for="idTarefa"]{
     display: block;
 }
+
+#btnAddTarefa{
+    background-color: lightcoral;
+}
