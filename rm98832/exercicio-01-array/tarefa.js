@@ -1,13 +1,37 @@
 
 let listaTarefasArray = [];
 
-const botaoAddTarefa = document.querySelector("#btnTarefa");
+const botaoAddTarefa = document.querySelector("#btnAddTarefa");
 
-botaoAddTarefa.addEventListener('click', (evento)=>{
+botaoAddTarefa.addEventListener("click", (evt)=>{
 
-    evento.preventDefault();
+    //Prevenindo o reload da página.
+    evt.preventDefault();
 
-    const inputTarefa = document.querySelector('#idTarefa');
+    //Recuperando o input da tarefa
+    const inputTarefa = document.querySelector("#idTarefa");
+
+    //Inerindo a tarefa no array de tarefas.
     listaTarefasArray.push(inputTarefa.value);
+    
+    const listaTarefasUL = document.querySelector("#listaTarefa");
+
+    let li = document.createElement("li"); 
+
+    // li.innerHTML = inputTarefa.value +" <button> x </button>";
+
+    li.textContent = inputTarefa.value;
+
+    let botaoExcluir = document.createElement("button");
+
+    botaoExcluir.textContent = " x ";
+
+    li.appendChild(botaoExcluir);
+
+    listaTarefasUL.appendChild(li);
+
+
+    //Imprimindo o array de tarefas e limpando o campo.
+    console.log(listaTarefasArray);
     inputTarefa.value = "";
-} )
+});
