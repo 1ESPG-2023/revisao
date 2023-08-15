@@ -23,6 +23,11 @@ botaoAddTarefa.addEventListener("click", (evt)=>{
 
     listaTarefasUL.appendChild(li);
 
+    botaoExcluir.addEventListener("click", (evt)=>{
+        evt.preventDefault();
+        evt.target.parentNode.remove();
+    });
+
     //Imprimindo o array de tarefas e limpando o campo.
     console.log(listaTarefasArray);
     inputTarefa.value = "";
