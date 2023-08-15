@@ -15,7 +15,12 @@ botaoAddTarefa.addEventListener("click", (evt)=>{
     
     const listaTarefasUL = document.querySelector("#listaTarefa");
     let li = document.createElement("li");
-    li.innerHTML = inputTarefa.value + ""+ "<button> x </button>";
+
+    li.textContent = inputTarefa.value;
+    let botaoExcluir = document.createElement("button");
+    botaoExcluir.textContent = " X "
+    li.appendChild(botaoExcluir);
+
     listaTarefasUL.appendChild(li);
 
     //Imprimindo o array de tarefas e limpando o campo.
