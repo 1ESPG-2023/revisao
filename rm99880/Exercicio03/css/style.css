@@ -1,0 +1,19 @@
+
+table, td {
+    border: solid black 2px;
+    border-collapse: collapse;
+    text-align: center;
+}
+table, th, td{
+    padding: 20px;
+    text-align: center;
+}
+
+fieldset{
+    width: 515px;
+    border: solid black 2px;
+}
+
+legend{
+    font-weight: bold;
+}
