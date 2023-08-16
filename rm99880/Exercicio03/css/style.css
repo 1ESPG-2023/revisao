@@ -40,7 +40,7 @@ tbody{
 table{
     width: 100%;
     margin-bottom : .5em;
-    table-layout: fixed;
+    table-layout:auto;
     text-align: center;
 }
 
@@ -64,12 +64,14 @@ button {
 }
 
 ul{
-    list-style: none;
+    list-style:none;
 }
 
 ul li{
     border-bottom: solid midnightblue 2px;
+    
 }
+
 
 #opcoes{
     width: 100%;
@@ -78,4 +80,42 @@ ul li{
 
 #opcoes button{
     background-color: black;
+}
+
+#AddTd{
+    border: solid black 2px;
+    list-style: decimal;
+}
+
+#AddTh{
+    border: solid black 2px;
+    list-style: decimal;
+}
+
+#AddTd2{
+    border: solid black 2px;
+    list-style: decimal;
+}
+
+#AddTh2{
+    border: solid black 2px;
+    list-style: decimal;
+}
+
+#AddTd3{
+    border: solid black 2px;
+    list-style: none;
+}
+
+#AddTh3{
+    border: solid black 2px;
+    list-style: none;
+}
+
+#tabela1-2{
+    width: 15%;
+}
+
+#tabela3{
+    width: 40%;
 }

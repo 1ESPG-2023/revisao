@@ -287,9 +287,29 @@ botaoValor.addEventListener("click", (evt)=>{
     NovoTh.appendChild(th);
 
     const NovoTd = document.querySelector("#AddTd");
-    let td = document.createElement("td");
-    td.textContent = tarefa3.valor + " - " + tarefa5.valor;
+    let td = document.createElement("li");
+    td.textContent = tarefa1.valor;
     NovoTd.appendChild(td);
+
+    const NovoTd2 = document.querySelector("#AddTd");
+    let td2 = document.createElement("li");
+    td2.textContent = tarefa2.valor;
+    NovoTd2.appendChild(td2);
+
+    const NovoTd3 = document.querySelector("#AddTd");
+    let td3 = document.createElement("li");
+    td3.textContent = tarefa3.valor;
+    NovoTd3.appendChild(td3);
+
+    const NovoTd4 = document.querySelector("#AddTd");
+    let td4 = document.createElement("li");
+    td4.textContent = tarefa4.valor;
+    NovoTd4.appendChild(td4);
+
+    const NovoTd5 = document.querySelector("#AddTd");
+    let td5 = document.createElement("li");
+    td5.textContent = tarefa5.valor;
+    NovoTd5.appendChild(td5);
     
 });
 
@@ -297,15 +317,35 @@ botaoTempo.addEventListener("click", (evt)=>{
     //Prevenindo o reload da página.
     evt.preventDefault();
 
-    const NovoTh = document.querySelector("#AddTh");
+    const NovoTh = document.querySelector("#AddTh2");
     let th = document.createElement("th");
     th.textContent = "Duração";
     NovoTh.appendChild(th);
 
-    const NovoTd = document.querySelector("#AddTd");
-    let td = document.createElement("td");
-    td.textContent = tarefa1.duração + " - " + tarefa2.duração + " - " + tarefa3.duração + " - " + tarefa4.duração + " - " + tarefa5.duração;
+    const NovoTd = document.querySelector("#AddTd2");
+    let td = document.createElement("li");
+    td.textContent = tarefa1.duração;
     NovoTd.appendChild(td);
+
+    const NovoTd2 = document.querySelector("#AddTd2");
+    let td2 = document.createElement("li");
+    td2.textContent = tarefa2.duração;
+    NovoTd2.appendChild(td2);
+
+    const NovoTd3 = document.querySelector("#AddTd2");
+    let td3 = document.createElement("li");
+    td3.textContent = tarefa3.duração;
+    NovoTd3.appendChild(td3);
+
+    const NovoTd4 = document.querySelector("#AddTd2");
+    let td4 = document.createElement("li");
+    td4.textContent = tarefa4.duração;
+    NovoTd4.appendChild(td4);
+
+    const NovoTd5 = document.querySelector("#AddTd2");
+    let td5 = document.createElement("li");
+    td5.textContent = tarefa5.duração;
+    NovoTd5.appendChild(td5);
     
 });
 
@@ -313,13 +353,72 @@ botaoOrdem.addEventListener("click", (evt)=>{
     //Prevenindo o reload da página.
     evt.preventDefault();
 
-    const NovoTh = document.querySelector("#AddTh");
+    const NovoTh = document.querySelector("#AddTh3");
     let th = document.createElement("th");
     th.textContent = "Ordem";
     NovoTh.appendChild(th);
 
-    const NovoTd = document.querySelector("#AddTd");
-    let td = document.createElement("td");
-    td.textContent = "Tarefa2 - Tarefa1 - Tarefa3 - Tarefa4 - Tarefa5"
+    
+    const NovoTd = document.querySelector("#AddTd3");
+    let td = document.createElement("li");
+    td.textContent = `A tarefa 1 está com importância de ${tarefa1.importância}`;
     NovoTd.appendChild(td);
+    
+    const NovoTd2 = document.querySelector("#AddTd3");
+    let td2 = document.createElement("li");
+    td2.textContent = `A tarefa 2 está com importância de ${tarefa2.importância}`;
+    NovoTd2.appendChild(td2);
+    
+    const NovoTd3 = document.querySelector("#AddTd3");
+    let td3 = document.createElement("li");
+    td3.textContent = `A tarefa 3 está com importância de ${tarefa3.importância}`;
+    NovoTd3.appendChild(td3);
+    
+    const NovoTd4 = document.querySelector("#AddTd3");
+    let td4 = document.createElement("li");
+    td4.textContent = `A tarefa 4 está com importância de ${tarefa4.importância}`;
+    NovoTd4.appendChild(td4);
+    
+    const NovoTd5 = document.querySelector("#AddTd3");
+    let td5 = document.createElement("li");
+    td5.textContent = `A tarefa 5 está com importância de ${tarefa5.importância}`;
+    NovoTd5.appendChild(td5);
+
+    const NovoTh2 = document.querySelector("#AddTh3");
+    let th2 = document.createElement("th");
+    th2.textContent = "";
+    NovoTh2.appendChild(th2);
+    const NovoTh3 = document.querySelector("#AddTh3");
+    let th3 = document.createElement("th");
+    th3.textContent = "Descrição";
+    NovoTh3.appendChild(th3);
+
+    const Novo11 = document.querySelector("#AddTd3");
+    let td11 = document.createElement("td");
+    Novo11.appendChild(td11);
+
+    const NovoTd6 = document.querySelector("#AddTd3");
+    let td6 = document.createElement("li");
+    td6.textContent = `A tarefa 1 está com importância de ${tarefa5.importância}`;
+    NovoTd6.appendChild(td6);
+
+    const NovoTd7 = document.querySelector("#AddTd3");
+    let td7 = document.createElement("li");
+    td7.textContent = `A tarefa 2 está com importância de ${tarefa5.importância}`;
+    NovoTd7.appendChild(td7);
+
+    const NovoTd8 = document.querySelector("#AddTd3");
+    let td8 = document.createElement("li");
+    td8.textContent = `A tarefa 2 está com importância de ${tarefa5.importância}`;
+    NovoTd8.appendChild(td8);
+
+    const NovoTd9 = document.querySelector("#AddTd3");
+    let td9 = document.createElement("li");
+    td9.textContent = `A tarefa 2 está com importância de ${tarefa5.importância}`;
+    NovoTd9.appendChild(td9);
+
+    const NovoTd10 = document.querySelector("#AddTd3");
+    let td10 = document.createElement("li");
+    td10.textContent = `A tarefa 2 está com importância de ${tarefa5.importância}`;
+    NovoTd10.appendChild(td10);
 });

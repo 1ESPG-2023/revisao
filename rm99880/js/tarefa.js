@@ -1,4 +1,7 @@
 let listaTarefasArray = [];
+let listaDescricao = [];
+let listaDepart = [];
+
 
 const botaoAddTarefa = document.querySelector("#btnAddTarefa");
 
