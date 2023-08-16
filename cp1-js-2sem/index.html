@@ -22,7 +22,11 @@
                 <input type="text" name="departamento" id="inputDepartamento" placeholder="Digite o departamento que pertence">
 
                 <label for="importancia">Importancia</label>
-                <input type="number" name="importancia" id="inputImportancia" placeholder="Digite a importancia de 0 a 10">
+                <select name="importancia" id="inputImportancia">
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
 
                 <input type="submit" id="btnAdiciona" value="Adicionar">
             </fieldset>
@@ -32,20 +36,14 @@
     <table id="listaDeTarefas" class="listaDeTarefas">
         <caption>Tabela de tarefas</caption>
         <thead>
-            <tr>
+            <tr id="trThead">
                 <th>Descrição</th>
                 <th>Autor</th>
                 <th>Departamento</th>
                 <th>Importância</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Comprar Frutas</td>
-                <td>vini</td>
-                <td>Mercado</td>
-                <td>6</td>
-            </tr>
+        <tbody id="tbody">
         </tbody>
     </table>
     

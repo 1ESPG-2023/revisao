@@ -46,7 +46,7 @@ body {
   }
 
   .listaDeTarefas th, .listaDeTarefas td {
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     padding: 8px;
     text-align: left;
   }
@@ -56,8 +56,24 @@ body {
   }
   td{
     background-color: #ddd;
+    border-bottom: 2px solid black;
   }
+  
   caption{
     font-size: 20px;
     margin-bottom: 10px;
+  }
+
+  button{
+    background-color:#ddd ;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+  }
+
+
+  button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
   }
