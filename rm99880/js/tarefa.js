@@ -36,6 +36,7 @@ botaoAddTarefa.addEventListener("click", (evt)=>{
         
         //Removendo do array com o método splice passando o indice.
         listaTarefasArray.splice(indiceTarefa, 1)
+        console.log(listaTarefasArray);
     });
 
     //Imprimindo o array de tarefas e limpando o campo.

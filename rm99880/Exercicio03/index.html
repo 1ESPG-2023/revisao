@@ -11,7 +11,7 @@
     <h1>Exercício 03 Array</h1>
     <table>
         <thead>
-            <tr>
+            <tr id="AddTh">
                 <th>Tarefas</th>
                 <th>Descrição</th>
                 <th>Autor</th>
@@ -21,29 +21,30 @@
         </thead>
         
         <tbody>
-            <tr>
+            <tr id="AddTd">
                 <td><ul id="listaTarefa"></ul></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><ul id="listaDes"></ul></td>
+                <td><ul id="listaAut"></ul></td>
+                <td><ul id="listaDep"></ul></td>
+                <td><ul id="listaImp"></ul></td>
             </tr>
         </tbody>
     </table>
 
-    <div>
-        <form action="#" method="get">
-            <fieldset>
-                <legend>Cadastro de Tarefas</legend>
-                <div>
-                    <label for="idTarefa">Nova Tarefa</label>
-                    <input type="text" name="tarefa" id="idTarefa" placeholder="Digite a tarefa.">
-                </div>
-                <div>
-                    <button type="submit" id="btnAddTarefa">Adicionar</button>
-                </div>
-            </fieldset>
-        </form>
+    <div id="botoes">
+        <h2>Tarefas:</h2>
+        <button id="btn1" class="botao">Tarefa 1</button>
+        <button id="btn2" class="botao">Tarefa 2</button>
+        <button id="btn3" class="botao">Tarefa 3</button>
+        <button id="btn4" class="botao">Tarefa 4</button>
+        <button id="btn5" class="botao">Tarefa 5</button>
+    </div>
+
+    <div id="opcoes">
+        <h2>Mais Opções:</h2>
+        <button id="btnValor">Valores</button>
+        <button id="btnDura">Duração</button>
+        <button id="btnOrd">Ordenar</button>
     </div>
     
 </body>
