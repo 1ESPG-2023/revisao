@@ -6,73 +6,130 @@ const inputDepartamento = document.getElementById("inputDepartamento");
 const inputImportancia = document.getElementById("inputImportancia");
 const trThead = document.getElementById("trThead");
 const tbody = document.getElementById("tbody");
-let arrayTarefas = []
+const btnOrdenaPorImportancia = document.getElementById("btnOrdenaPorImportancia")
+let arrayTarefas = [];
+let importanciaNumero = 0;
 //Escutador de evento no forms escutando o evento "submit"
-formsAdicionaTarefas.addEventListener("submit", (e) => {
-    e.preventDefault()
+formsAdicionaTarefas.addEventListener("submit", function(e){
+    e.preventDefault();
+    
+    // //transforma a importancia em número
+    // if(inputImportancia.value == "baixa"){
+    //     importanciaNumero = 0
+    // }else if(inputImportancia.value =="media"){
+    //     importanciaNumero = 1;
+    // }else{
+    //     importanciaNumero = 2;
+    // }
     //Definindo objeto da tarefa com as respectivas propriedades
-    const tarefa = {
+    tarefa = {
         descricao: inputDescricao.value,
         autor: inputAutor.value,
         departamento: inputDepartamento.value,
         importancia: inputImportancia.value
     };
 
-    console.log(tarefa)
     //Adiciona os objetos da tarefa no array
     arrayTarefas.push(tarefa);
-
     //Chamando a função de adicionar item na tabela
     adicionaTarefaNaTabela(arrayTarefas);
 });
+btnOrdenaPorImportancia.addEventListener("click", ()=>{
+    arrayTarefas.sort((a, b) => importanciaParaNumero(b.importancia) - importanciaParaNumero(a.importancia));
+    adicionaTarefaNaTabela(arrayTarefas);
+})
+function importanciaParaNumero(importancia){
+    if (importancia === "baixa") {
+        return 0;
+    } else if (importancia === "media") {
+        return 1;
+    } else if (importancia === "alta") {
+        return 2;
+    }
+}
 //cria o th das opções
-let thOpcoes = criaElemento("th")
+let thOpcoes = criaElemento("th");
 //cria th do valor
-let thValor = criaElemento("th")
+let thValor = criaElemento("th");
+//cria th duração
+let thDuracao = criaElemento("th");
+
 
 
 
 
 function adicionaTarefaNaTabela(arrayTarefas) {
     tbody.innerHTML = ""
+
     arrayTarefas.forEach((item) => {
         //criando elementos da tabela
-        let tr = criaElemento("tr") //Elemento pai
-
+        let tr = criaElemento("tr");//Elemento pai
+        
         //childs
         let tdDescricao = criaElemento("td");
         let tdAutor = criaElemento("td");
         let tdDepartamento = criaElemento("td");
         let tdImportancia = criaElemento("td");
-
+        let tdValor = criaElemento("td");
+        let tdDuracao = criaElemento("td");
+        
         //opções possiveis fazer com cada tarefa(são criadas toda vez que uma tarefa é adicionada)
         let btnAddValor = criaElemento("button");
-        let btnDuracao = criaElemento("button");
+        let btnAddDuracao = criaElemento("button");
         let btnConcluir = criaElemento("button");
-
+        
         //Adicionando elementos na tabela
         adicionaElementoNatabela(tdDescricao, item.descricao, tr);
         adicionaElementoNatabela(tdAutor, item.autor, tr);
         adicionaElementoNatabela(tdDepartamento, item.departamento, tr);
         adicionaElementoNatabela(tdImportancia, item.importancia, tr);
+        if(item.valor !== undefined){
+            adicionaElementoNatabela(tdValor, "R$"+item.valor , tr);
+        }else{
+            adicionaElementoNatabela(tdValor, "-", tr);
+        }
+        if(item.duracao !== undefined){
+            adicionaElementoNatabela(tdDuracao, item.duracao + "dias", tr)
+        }
+        else{
+            adicionaElementoNatabela(tdDuracao, "-", tr)
+        }
+        
         //opções da tr
         adicionaElementoNatabela(btnAddValor, "Adicionar Valor", tr)
-        adicionaElementoNatabela(btnDuracao, "Adicionar duração", tr)
+        adicionaElementoNatabela(btnAddDuracao, "Adicionar duração", tr)
         adicionaElementoNatabela(btnConcluir, "Concluir", tr)
-        //thead's criados
-        adicionaElementoNatabela(thOpcoes, "Opções", trThead)
-        adicionaElementoNatabela(thValor, "valor", trThead)
 
+        //thead's criados
+        if(item.valor !== undefined){
+            adicionaElementoNatabela(thValor, "Valor", trThead)
+        }else{
+            adicionaElementoNatabela(thValor, "Valor", trThead)
+        }
+        // adicionaElementoNatabela(thDuracao, "Duração", trThead)
+        if(item.duracao !== undefined){
+            // let tdDuracao = criaElemento("td")
+            adicionaElementoNatabela(thDuracao, "Duração", trThead)
+        }else{
+            let tdDuracao = criaElemento("td")
+            adicionaElementoNatabela(thDuracao, "Duração", trThead)
+        }
+        adicionaElementoNatabela(thOpcoes, "Opções", trThead)
+        
+        
         //Botão concluir quando clicado ele remove uma tr da tabela
         btnConcluir.addEventListener("click", () => {
             tr.remove()
             deletaItem(item)
         });
-
+        
         btnAddValor.addEventListener("click", () => {
-            adicionaValor(item)
-            let tdValor = criaElemento("td")
-            adicionaElementoNatabela(tdValor, item.valor, tr)
+            adicionaValor(item, tdValor, tr)
+            
+        })
+
+        btnAddDuracao.addEventListener("click", ()=>{
+            adicionaDuracao(item, tdDuracao, tr)
         })
 
         //adicionando a tr no tbody da tabela
@@ -81,11 +138,19 @@ function adicionaTarefaNaTabela(arrayTarefas) {
     })
 }
 
-function adicionaValor(item) {
+function adicionaValor(item, tdvalor, tr) {
     const valor = parseFloat(prompt("Digite um valor: "));
     if (!isNaN(valor)) {
         item.valor = valor
+        adicionaTarefaNaTabela(arrayTarefas)
+    }
+}
 
+function adicionaDuracao(item, tdduracao, tr){
+    const duracao = parseInt(prompt("Digite a duração (em dias):"))
+    if(!isNaN(duracao)){
+        item.duracao = duracao
+        adicionaTarefaNaTabela(arrayTarefas)
     }
 }
 
@@ -113,6 +178,3 @@ function deletaItem(item) {
         }
     }
 }
-
-
-
