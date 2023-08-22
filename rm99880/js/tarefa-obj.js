@@ -1,3 +1,4 @@
+//Declaração de objetos
 const tarefa1 = {
     descricao: " Escovar os dentes",
     autor: " Eu",
@@ -48,26 +49,31 @@ botaoAddTarefa1.addEventListener("click", (evt)=>{
     //Prevenindo o reload da página.
     evt.preventDefault();
 
+    //Adicionando o nome da tarefa
     const listaTarefas = document.querySelector("#listaTarefa");
     let liTar = document.createElement("li");
     liTar.textContent = "Tarefa 1";
     listaTarefas.appendChild(liTar);
     
+    //Adicionando a descrição desta tarefa pelo objeto
     const listaTarefasDes = document.querySelector("#listaDes");
     let liDes = document.createElement("li");
     liDes.textContent = tarefa1.descricao;
     listaTarefasDes.appendChild(liDes);
 
+    //Adicionando o autor desta tarefa pelo objeto
     const listaTarefasAut = document.querySelector("#listaAut");
     let liAut = document.createElement("li");
     liAut.textContent = tarefa1.autor;
     listaTarefasAut.appendChild(liAut);
     
+    //Adicionando o departamento desta tarefa pelo objeto
     const listaTarefasDep = document.querySelector("#listaDep");
     let liDep = document.createElement("li");
     liDep.textContent = tarefa1.dep;
     listaTarefasDep.appendChild(liDep);
 
+    //Adicionando a importância desta tarefa pelo objeto
     const listaTarefasImp = document.querySelector("#listaImp");
     let liImp = document.createElement("li");
     liImp.textContent = tarefa1.importância;
@@ -399,26 +405,26 @@ botaoOrdem.addEventListener("click", (evt)=>{
 
     const NovoTd6 = document.querySelector("#AddTd3");
     let td6 = document.createElement("li");
-    td6.textContent = `A tarefa 1 está com importância de ${tarefa5.importância}`;
+    td6.textContent =  tarefa1.descricao;
     NovoTd6.appendChild(td6);
 
     const NovoTd7 = document.querySelector("#AddTd3");
     let td7 = document.createElement("li");
-    td7.textContent = `A tarefa 2 está com importância de ${tarefa5.importância}`;
+    td7.textContent = tarefa2.descricao;
     NovoTd7.appendChild(td7);
 
     const NovoTd8 = document.querySelector("#AddTd3");
     let td8 = document.createElement("li");
-    td8.textContent = `A tarefa 2 está com importância de ${tarefa5.importância}`;
+    td8.textContent = tarefa3.descricao;
     NovoTd8.appendChild(td8);
 
     const NovoTd9 = document.querySelector("#AddTd3");
     let td9 = document.createElement("li");
-    td9.textContent = `A tarefa 2 está com importância de ${tarefa5.importância}`;
+    td9.textContent = tarefa4.descricao;
     NovoTd9.appendChild(td9);
 
     const NovoTd10 = document.querySelector("#AddTd3");
     let td10 = document.createElement("li");
-    td10.textContent = `A tarefa 2 está com importância de ${tarefa5.importância}`;
+    td10.textContent = tarefa5.descricao;
     NovoTd10.appendChild(td10);
 });
