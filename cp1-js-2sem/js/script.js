@@ -13,14 +13,6 @@ let importanciaNumero = 0;
 formsAdicionaTarefas.addEventListener("submit", function(e){
     e.preventDefault();
     
-    // //transforma a importancia em número
-    // if(inputImportancia.value == "baixa"){
-    //     importanciaNumero = 0
-    // }else if(inputImportancia.value =="media"){
-    //     importanciaNumero = 1;
-    // }else{
-    //     importanciaNumero = 2;
-    // }
     //Definindo objeto da tarefa com as respectivas propriedades
     tarefa = {
         descricao: inputDescricao.value,
@@ -83,11 +75,13 @@ function adicionaTarefaNaTabela(arrayTarefas) {
         adicionaElementoNatabela(tdAutor, item.autor, tr);
         adicionaElementoNatabela(tdDepartamento, item.departamento, tr);
         adicionaElementoNatabela(tdImportancia, item.importancia, tr);
+        //Verifica se .valor não undefined
         if(item.valor !== undefined){
             adicionaElementoNatabela(tdValor, "R$"+item.valor , tr);
         }else{
             adicionaElementoNatabela(tdValor, "-", tr);
         }
+        //Verifica se .duracao não é undefined
         if(item.duracao !== undefined){
             adicionaElementoNatabela(tdDuracao, item.duracao + "dias", tr)
         }
@@ -106,14 +100,13 @@ function adicionaTarefaNaTabela(arrayTarefas) {
         }else{
             adicionaElementoNatabela(thValor, "Valor", trThead)
         }
-        // adicionaElementoNatabela(thDuracao, "Duração", trThead)
+
         if(item.duracao !== undefined){
-            // let tdDuracao = criaElemento("td")
             adicionaElementoNatabela(thDuracao, "Duração", trThead)
         }else{
-            let tdDuracao = criaElemento("td")
             adicionaElementoNatabela(thDuracao, "Duração", trThead)
         }
+        
         adicionaElementoNatabela(thOpcoes, "Opções", trThead)
         
         
@@ -138,7 +131,7 @@ function adicionaTarefaNaTabela(arrayTarefas) {
     })
 }
 
-function adicionaValor(item, tdvalor, tr) {
+function adicionaValor(item) {
     const valor = parseFloat(prompt("Digite um valor: "));
     if (!isNaN(valor)) {
         item.valor = valor
@@ -146,7 +139,7 @@ function adicionaValor(item, tdvalor, tr) {
     }
 }
 
-function adicionaDuracao(item, tdduracao, tr){
+function adicionaDuracao(item){
     const duracao = parseInt(prompt("Digite a duração (em dias):"))
     if(!isNaN(duracao)){
         item.duracao = duracao
